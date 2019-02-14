@@ -1,3 +1,10 @@
+# Plugin Keyboard
+Hacker's Keyboard with Plugins
+## Current State
+[X] Java Customized
+[ ] UI Customized
+[ ] Plugins
+## Original README
 ## Overview ##
 
 Are you missing the key layout you're used to from your computer when using an Android device? This software keyboard has separate number keys, punctuation in the usual places, and arrow keys. It is based on the AOSP Gingerbread soft keyboard, so it supports multitouch for the modifier keys.
