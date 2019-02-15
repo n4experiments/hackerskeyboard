@@ -88,7 +88,7 @@ public class LatinIME extends InputMethodService implements
         ComposeSequencing,
         LatinKeyboardBaseView.OnKeyboardActionListener,
         SharedPreferences.OnSharedPreferenceChangeListener {
-	private GREP_APPID.Plugin mPkPlugin;
+	private PluginKeyboardAPI.Plugin mPkPlugin;
     private static final String TAG = "PCKeyboardIME";
     private static final String NOTIFICATION_CHANNEL_ID = "PCKeyboard";
     private static final int NOTIFICATION_ONGOING_ID = 1001;
