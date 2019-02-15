@@ -87,6 +87,7 @@ public class LatinIME extends InputMethodService implements
         ComposeSequencing,
         LatinKeyboardBaseView.OnKeyboardActionListener,
         SharedPreferences.OnSharedPreferenceChangeListener {
+	private pluginkeyboard.Plugin mPkPlugin;
     private static final String TAG = "PCKeyboardIME";
     private static final String NOTIFICATION_CHANNEL_ID = "PCKeyboard";
     private static final int NOTIFICATION_ONGOING_ID = 1001;
@@ -413,6 +414,8 @@ public class LatinIME extends InputMethodService implements
         pFilter.addAction("android.intent.action.PACKAGE_REPLACED");
         pFilter.addAction("android.intent.action.PACKAGE_REMOVED");
         registerReceiver(mPluginManager, pFilter);
+		
+		mPkPlugin = new pluginkeyboard.Plugin();
 
         LatinIMEUtil.GCUtils.getInstance().reset();
         boolean tryGC = true;
@@ -1474,7 +1477,22 @@ public class LatinIME extends InputMethodService implements
     }
 
     private void onPluginKeyPressed() {
+		//Log.i("PluginKeyboard","BTN_PLUGIN pressed");
+		AlertDialog d = new AlertDialog.Builder(this)
+		.setCancelable(true)
+		.setTitle("Plugin Keyboard")
+		.setMessage("Example Plugin")
+		.setNeutralButton("OK", new DialogInterface.OnClickListener(){
+			@Override
+			public void onClick(DialogInterface p1, int p2)
+			{
+				p1.dismiss();
+			}
+		})
+		.create();
+		d.show();
         // Plugins
+		mPkPlugin.onBtnClick("BTN_PLUGIN");
     }
 
     private boolean isShowingOptionDialog() {
@@ -1989,6 +2007,7 @@ public class LatinIME extends InputMethodService implements
             }
             break;
         case LatinKeyboardView.KEYCODE_OPTIONS:
+			System.out.println("plug1");
             onPluginKeyPressed();
             break;
         case LatinKeyboardView.KEYCODE_OPTIONS_LONGPRESS:
