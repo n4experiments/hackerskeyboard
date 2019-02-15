@@ -79,6 +79,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import com.example.pluginkeyboard.R;
 
 /**
  * Input method implementation for Qwerty'ish keyboard.
@@ -87,7 +88,7 @@ public class LatinIME extends InputMethodService implements
         ComposeSequencing,
         LatinKeyboardBaseView.OnKeyboardActionListener,
         SharedPreferences.OnSharedPreferenceChangeListener {
-	private pluginkeyboard.Plugin mPkPlugin;
+	private GREP_APPID.Plugin mPkPlugin;
     private static final String TAG = "PCKeyboardIME";
     private static final String NOTIFICATION_CHANNEL_ID = "PCKeyboard";
     private static final int NOTIFICATION_ONGOING_ID = 1001;
@@ -1477,22 +1478,26 @@ public class LatinIME extends InputMethodService implements
     }
 
     private void onPluginKeyPressed() {
+		final Context osCnt = this;
 		//Log.i("PluginKeyboard","BTN_PLUGIN pressed");
-		AlertDialog d = new AlertDialog.Builder(this)
-		.setCancelable(true)
-		.setTitle("Plugin Keyboard")
-		.setMessage("Example Plugin")
-		.setNeutralButton("OK", new DialogInterface.OnClickListener(){
+		mPkPlugin.onBtnClick(new PluginKeyboardAPI(){
 			@Override
-			public void onClick(DialogInterface p1, int p2)
+			public void fixDialog(AlertDialog d)
 			{
-				p1.dismiss();
+				Window window = d.getWindow();
+				WindowManager.LayoutParams lp = window.getAttributes();
+				lp.token = mKeyboardSwitcher.getInputView().getWindowToken();
+				lp.type = WindowManager.LayoutParams.TYPE_APPLICATION_ATTACHED_DIALOG;
+				window.setAttributes(lp);
+				window.addFlags(WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
 			}
-		})
-		.create();
-		d.show();
-        // Plugins
-		mPkPlugin.onBtnClick("BTN_PLUGIN");
+			private final Context ctx = osCnt;
+			@Override
+			public Context getCtx()
+			{
+				return this.ctx;
+			}
+		},"BTN_PLUGIN");
     }
 
     private boolean isShowingOptionDialog() {

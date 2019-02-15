@@ -35,6 +35,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import com.example.pluginkeyboard.R;
 
 public class LatinKeyboardView extends LatinKeyboardBaseView {
     static final String TAG = "HK/LatinKeyboardView";

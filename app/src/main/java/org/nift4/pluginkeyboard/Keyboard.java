@@ -16,8 +16,6 @@
 
 package org.nift4.pluginkeyboard;
 
-import org.nift4.pluginkeyboard.R;
-
 import org.xmlpull.v1.XmlPullParserException;
 
 import android.content.Context;
@@ -38,6 +36,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 import java.util.StringTokenizer;
+import com.example.pluginkeyboard.R;
 
 
 /**

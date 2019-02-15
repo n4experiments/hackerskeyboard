@@ -16,6 +16,7 @@
 
 package org.nift4.pluginkeyboard;
 
+import com.example.pluginkeyboard.R;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;

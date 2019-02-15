@@ -58,6 +58,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.WeakHashMap;
+import com.example.pluginkeyboard.R;
 
 /**
  * A view that renders a virtual {@link LatinKeyboard}. It handles rendering of keys and

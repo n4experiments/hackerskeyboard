@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="org.nift4.pluginkeyboard">
+        package="GREP_APPID">
 
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
@@ -8,16 +8,16 @@
     <uses-feature android:name="android.hardware.faketouch" android:required="false" />
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
 
-    <application android:label="Plugin Keyboard"
+    <application android:label="GREP_APP_NAME"
             android:allowBackup="true"
-            android:backupAgent="LatinIMEBackupAgent"
+            android:backupAgent="org.nift4.pluginkeyboard.LatinIMEBackupAgent"
             android:restoreAnyVersion="true"
             android:hardwareAccelerated="false"
             android:killAfterRestore="false"
             android:icon="@drawable/icon">
 
-        <service android:name="LatinIME"
-                android:label="Plugin Keyboard"
+        <service android:name="org.nift4.pluginkeyboard.LatinIME"
+                android:label="GREP_APP_NAME"
                 android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
                 <action android:name="android.view.InputMethod" />
@@ -25,14 +25,14 @@
             <meta-data android:name="android.view.im" android:resource="@xml/method" />
         </service>
 
-        <activity android:name="Main" android:label="Plugin Keyboard">
+        <activity android:name="org.nift4.pluginkeyboard.Main" android:label="GREP_APP_NAME">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <activity android:name="LatinIMESettings" android:label="Settings for Plugin Keyboard">
+        <activity android:name="org.nift4.pluginkeyboard.LatinIMESettings" android:label="Keyboard Settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="org.nift4.pluginkeyboard.SETTINGS"/>
@@ -40,7 +40,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="InputLanguageSelection"
+        <activity android:name="org.nift4.pluginkeyboard.InputLanguageSelection"
                 android:label="@string/language_selection_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -49,7 +49,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="PrefScreenActions"
+        <activity android:name="org.nift4.pluginkeyboard.PrefScreenActions"
                 android:label="@string/pref_screen_actions_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -58,7 +58,7 @@
             </intent-filter>
         </activity>
             
-        <activity android:name="PrefScreenView"
+        <activity android:name="org.nift4.pluginkeyboard.PrefScreenView"
                 android:label="@string/pref_screen_actions_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -67,7 +67,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="PrefScreenFeedback"
+        <activity android:name="org.nift4.pluginkeyboard.PrefScreenFeedback"
                 android:label="@string/pref_screen_feedback_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
