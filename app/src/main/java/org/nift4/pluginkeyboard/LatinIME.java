@@ -416,7 +416,7 @@ public class LatinIME extends InputMethodService implements
         pFilter.addAction("android.intent.action.PACKAGE_REMOVED");
         registerReceiver(mPluginManager, pFilter);
 		
-		mPkPlugin = new pluginkeyboard.Plugin();
+		mPkPlugin = new GREP_APPID.Plugin();
 
         LatinIMEUtil.GCUtils.getInstance().reset();
         boolean tryGC = true;
