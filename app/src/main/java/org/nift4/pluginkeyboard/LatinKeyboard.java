@@ -37,7 +37,7 @@ import android.view.inputmethod.EditorInfo;
 
 import java.util.List;
 import java.util.Locale;
-import com.example.pluginkeyboard.R;
+import GREP_APPID.R;
 
 public class LatinKeyboard extends Keyboard {
 

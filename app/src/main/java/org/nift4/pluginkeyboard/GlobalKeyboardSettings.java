@@ -6,7 +6,7 @@ import java.util.Map;
 
 import android.content.SharedPreferences;
 import android.content.res.Resources;
-import com.example.pluginkeyboard.R;
+import GREP_APPID.R;
 
 /**
  * Global current settings for the keyboard.

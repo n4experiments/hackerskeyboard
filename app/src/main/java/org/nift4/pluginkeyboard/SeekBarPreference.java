@@ -9,7 +9,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import com.example.pluginkeyboard.R;
+import GREP_APPID.R;
 
 /**
  * SeekBarPreference provides a dialog for editing float-valued preferences with a slider.

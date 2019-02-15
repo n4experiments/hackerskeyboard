@@ -27,7 +27,7 @@ import java.lang.ref.SoftReference;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Locale;
-import com.example.pluginkeyboard.R;
+import GREP_APPID.R;
 
 public class KeyboardSwitcher implements
         SharedPreferences.OnSharedPreferenceChangeListener {

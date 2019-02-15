@@ -79,7 +79,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
-import com.example.pluginkeyboard.R;
+import GREP_APPID.R;
 
 /**
  * Input method implementation for Qwerty'ish keyboard.

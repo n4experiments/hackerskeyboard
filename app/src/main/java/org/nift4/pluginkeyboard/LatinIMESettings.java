@@ -36,7 +36,7 @@ import android.preference.PreferenceGroup;
 import android.text.AutoText;
 import android.text.InputType;
 import android.util.Log;
-import com.example.pluginkeyboard.R;
+import GREP_APPID.R;
 
 public class LatinIMESettings extends PreferenceActivity
         implements SharedPreferences.OnSharedPreferenceChangeListener,

@@ -20,7 +20,7 @@ import android.app.backup.BackupManager;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import com.example.pluginkeyboard.R;
+import GREP_APPID.R;
 
 public class PrefScreenActions extends PreferenceActivity
         implements SharedPreferences.OnSharedPreferenceChangeListener {

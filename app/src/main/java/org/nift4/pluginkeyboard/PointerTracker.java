@@ -26,7 +26,7 @@ import android.content.res.Resources;
 import org.nift4.pluginkeyboard.Keyboard.Key;
 import android.util.Log;
 import android.view.MotionEvent;
-import com.example.pluginkeyboard.R;
+import GREP_APPID.R;
 
 public class PointerTracker {
     private static final String TAG = "PointerTracker";

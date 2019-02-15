@@ -35,7 +35,7 @@ import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
-import com.example.pluginkeyboard.R;
+import GREP_APPID.R;
 
 public class InputLanguageSelection extends PreferenceActivity {
     private static final String TAG = "PCKeyboardILS";
