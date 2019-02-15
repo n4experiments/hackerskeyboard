@@ -1473,10 +1473,8 @@ public class LatinIME extends InputMethodService implements
         }
     }
 
-    private void onOptionKeyLongPressed() {
-        if (!isShowingOptionDialog()) {
-            showInputMethodPicker();
-        }
+    private void onPluginKeyPressed() {
+        // Plugins
     }
 
     private boolean isShowingOptionDialog() {
@@ -1991,10 +1989,10 @@ public class LatinIME extends InputMethodService implements
             }
             break;
         case LatinKeyboardView.KEYCODE_OPTIONS:
-            onOptionKeyPressed();
+            onPluginKeyPressed();
             break;
         case LatinKeyboardView.KEYCODE_OPTIONS_LONGPRESS:
-            onOptionKeyLongPressed();
+            onOptionKeyPressed();
             break;
         case LatinKeyboardView.KEYCODE_COMPOSE:
             mComposeMode = !mComposeMode;
