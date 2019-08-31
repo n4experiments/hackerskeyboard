@@ -3,7 +3,6 @@ Hacker's Keyboard with Plugins
 ## Current State
 - [X] Java Customized
 - [ ] UI Customized
-- [ ] Plugins
 ## Original README
 ## Overview ##
 
