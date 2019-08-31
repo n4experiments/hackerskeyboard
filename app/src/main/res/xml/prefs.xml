@@ -75,7 +75,7 @@
     <PreferenceScreen
             android:title="@string/pref_screen_view_title"
             android:summary="@string/pref_screen_view_title_summary">
-        <intent android:action="org.pocketworkstation.pckeyboard.PREFS_VIEW"/>
+        <intent android:action="org.nift4.pluginkeyboard.PREFS_VIEW"/>
     </PreferenceScreen>
 
     </PreferenceCategory>
@@ -106,7 +106,7 @@
             android:title="@string/language_selection_title"
             android:summary="@string/language_selection_summary">
         <intent
-                android:action="org.pocketworkstation.pckeyboard.INPUT_LANGUAGE_SELECTION"/>
+                android:action="org.nift4.pluginkeyboard.INPUT_LANGUAGE_SELECTION"/>
     </PreferenceScreen>
     </PreferenceCategory>
 
@@ -143,13 +143,13 @@
             android:title="@string/pref_screen_feedback_title"
             android:summary="@string/pref_screen_feedback_title_summary">
         <intent
-                android:action="org.pocketworkstation.pckeyboard.PREFS_FEEDBACK"/>
+                android:action="org.nift4.pluginkeyboard.PREFS_FEEDBACK"/>
     </PreferenceScreen>
 
     <PreferenceScreen
             android:title="@string/pref_screen_actions_title"
             android:summary="@string/pref_screen_actions_title_summary">
-        <intent android:action="org.pocketworkstation.pckeyboard.PREFS_ACTIONS"/>
+        <intent android:action="org.nift4.pluginkeyboard.PREFS_ACTIONS"/>
     </PreferenceScreen>
 
     <org.nift4.pluginkeyboard.AutoSummaryListPreference

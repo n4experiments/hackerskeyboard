@@ -25,7 +25,7 @@ Latinoamérica), Swedish (Svenska), Tamil (தமிழ்), Thai (ไทย), T
 and Ukrainian (українська мова).
 
 To install, get **[Hacker's
-Keyboard](https://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard)**
+Keyboard](https://play.google.com/store/apps/details?id=org.nift4.pluginkeyboard)**
 from the Play Store, plus optional [dictionary
 packs](https://play.google.com/store/apps/developer?id=Klaus+Weidner).
 
